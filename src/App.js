@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar/NavBar.js"; 
+import NavBar from "./components/NavBar/NavBar.js";
 import './App.css';
 
 function App() {
@@ -6,8 +6,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar/>
-       
-
       </header>
     </div>
   );
