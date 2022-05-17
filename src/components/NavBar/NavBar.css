@@ -1,22 +1,25 @@
 .gradiente{
     background: rgb(72,190,25);
     background: linear-gradient(90deg, rgba(72,190,25,1) 0%, rgba(58,144,26,1) 14%, rgba(47,115,25,1) 63%, rgba(26,60,22,1) 100%);
-    
 }
 
 h1 span{
     color: rgb(186, 187, 186);
-   
+}
+
+.logo{
+    font-size: 30px;
+    margin:0 20px;
 }
 nav{
-    height: 58px;
-    padding: 8px;
+    height: 64px;
+    padding: 8px; 
     -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
-.posicionamiento{
+.positionNavBar, .postionLogo {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -24,6 +27,8 @@ nav{
     
     
 }
+
+
 
 button{
     margin: 3px 10px;
