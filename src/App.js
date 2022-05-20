@@ -10,8 +10,10 @@ function App() {
       <header className="App-header">
         <NavBar/>
         <ItemListContainer greeting ="Bienvenidos"/> 
-        <ItemCount stock='5'inicial='1' /> 
       </header>
+      <main>
+        <ItemCount stock={10} inicial={1}/> 
+      </main>
     </div>
   );
 }

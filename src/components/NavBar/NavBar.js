@@ -14,9 +14,9 @@ const NavBar = () => {
                     </div>
                     <div className= "navbar__div">
                         <button>JUEGOS</button>
-                        <button>DLC</button>
-                        <button>JUEGOS GRATUITOS</button>
-                        <button>COLECCIONES</button>
+                        <button>SILLAS GAMER</button>
+                        <button>PERIFERICOS</button>
+                        <button>MONITORES</button>
                     </div>
                     <CartWidget/>
                 </div>
