@@ -2,7 +2,7 @@ import {useState} from 'react'
 import './ItemCount.css'
 const ItemCount = ({stock,inicial}) =>{
 
-    const [count, setCount]= useState(parseInt(inicial))
+    const [count, setCount]= useState(inicial)
     
     const sumar = () => {
         if((count>=0) &&(count < stock)){
@@ -16,8 +16,7 @@ const ItemCount = ({stock,inicial}) =>{
 }
     return (
         <div>
-            <div className='cart'>
-                <img src='./images/teclado-gamer-led-trust-ziva.jpg' alt='teclado-gamer'  height='190' ></img>
+            <div className='contador'>
                 <div className= 'posicionBotones' >
                     <button onClick={restar}>-</button>
                     <p>{count}</p>
