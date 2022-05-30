@@ -1,5 +1,5 @@
-.card{
-    width: 200px;
+.detalle{
+    width: 600px;
     background-color: rgb(62, 66, 62);
     margin: 50px;
     -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
@@ -7,9 +7,24 @@
     box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
     border-radius: 10px 10px 10px 10px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
     border: solid 2px rgb(72,190,25);
 }
 
-.card img{
-    padding: 10px 10px 0px 10px;
+.detalleFotos img{
+    padding: 10px;
 } 
+
+.detalleFotos{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.detalleInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}

@@ -3,10 +3,12 @@ const productos= [
     id:1,
     nombre:'Teclado Redragon K550',
     precio:8250,
-    foto:'../images/teclado_redragon_k550.jpg',
+    foto:'../images/teclado_redragon_k550_1.jpg',
+    foto2:'../images/teclado_redragon_k550_2.jpg',
+    foto3:'../images/teclado_redragon_k550_3.jpg',
     categoria: 'teclado',
     stock:10,
-    detalle:'Teclado Redragon K550',
+    detalle:'Con teclas ajustadas para el rendimiento. G213 Prodigy combina lo mejor en sensación táctil y rendimiento para gaming. Pon un toque exclusivo en el sistema con zonas de iluminación RGB personalizables, o usa controles multimedia para reproducir, interrumpir o silenciar al instante música o vídeo.',
 
 },{
     id:2,
@@ -43,6 +45,13 @@ export const getProductos = () => {
     return new Promise ((resolve) =>{
             setTimeout(()=>{
                 resolve(productos)
+        }, 2000)
+    })
+}
+export const getProductosById = (id) => {
+    return new Promise ((resolve) =>{
+            setTimeout(()=>{
+                resolve(productos.find(prod=> prod.id ===id))
         }, 2000)
     })
 }
