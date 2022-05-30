@@ -15,7 +15,6 @@ const ItemCount = ({stock,inicial}) =>{
         }
 }
     return (
-        <div>
             <div className='contador'>
                 <div className= 'posicionBotones' >
                     <button onClick={restar}>-</button>
@@ -24,7 +23,7 @@ const ItemCount = ({stock,inicial}) =>{
                 </div>
                 <button className='addBoton'>Agregar al carrito</button>
             </div> 
-        </div>
+        
         ) 
 }
 
