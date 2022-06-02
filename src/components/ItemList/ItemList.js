@@ -4,12 +4,8 @@ const ItemList = ({productos}) => {
 
     return (
         <div style={{display: 'flex', flexDirection:'row'}}>
-            {productos.map(product => <Item key={product.id} {...product}/>)}
+            {productos.map(product => <Item key={product.id} {...product}  />)}
         </div>
-                     
-                     
-                     
-                     
         )} 
     
 
