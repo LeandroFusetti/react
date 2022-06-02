@@ -11,15 +11,13 @@ const ItemDetailContainer = ()=>{
         getProductosById(productoId).then(response =>{
             setProductoId(response)
         })
-    },[]) 
+    }) 
 
-    
     return(
         <div>
             <ItemDetail {...producto}/>
         </div>
     )
-
 }
 
 export default ItemDetailContainer

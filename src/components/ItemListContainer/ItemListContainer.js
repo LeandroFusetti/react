@@ -14,8 +14,6 @@ const ItemListContainer = (props) => {
         if(!categoriaId) {
             getProductos().then(response => {
                 setProductos(response)
-            }).catch(error=>{
-                console.log(error)
             }).finally(()=>{
                 setCargando(false)
             })
@@ -25,8 +23,6 @@ const ItemListContainer = (props) => {
         } else {
             getProductosPorCategoria(categoriaId).then(response => {
                 setProductos(response)
-            }).catch(error=>{
-                console.log(error)
             }).finally(()=>{
                 setCargando(false)
             })
