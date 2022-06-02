@@ -1,70 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](./public/images/Demostracion.gif "Demostracion")
 
-## Available Scripts
+# ALL GAMER
+Sitio web de tienda de articulos de computacion orientados al Gaming, organizados por categorias.
 
-In the project directory, you can run:
+## Inicio
+Se ejecutar NPM start para iniciar el servidor y montar los componentes
 
-### `npm start`
+## Routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La ruta **de inicio '/'** donde se encuentran todos los productos disponibles.(Aclaración: al estar posicionado en alguna otra ruta, el logo contiene un link para volver a la ruta de inicio)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La ruta **'/item/:productoId'** muestra el detalle del producto, fotos e información detallada del mismo.
 
-### `npm test`
+La ruta **'/item/:categoriaId'** nos permite filtrar y mostrar unicamente los productos por categoria seleccionada. 
+(Aclaración: la categoria Juegos se dejo vacia adrede para que al seleccionarla se indique que no se encontraron productos, al no existir los mismos de esa clase de categoria)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La ruta **'*'** es para indicar que la pagina no fue encontrada
 
-### `npm run build`
+## Componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Item: Componente donde se visualiza la card de cada producto, con nombre, precio, imagen y se le incluyo un contador para seleccionar el numero de productos deseados. Ademas cuenta con un Link para redireccionar al detalle del mismo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ItemCount: Componente que contiene las funciones de ambos botones sumar o restar producto. Ademas del boton de agregar al carrito cuya funcional aun no esta implementada
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ItemDetail: Componente donde se visualiza el detalle del producto, con fotos adicionales e informacion del mismo, cuenta tambien con el ItemCount.
 
-### `npm run eject`
+ItemDetailContainer: Muestra componente ItemDetail luego de seleccionarlo en la pagina inicial.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ItemList: Componente que atraves del método map, monta cada producto desde el componente Item cuando se realiza la llamada correspondiente.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ItemListContainer: Componente encargado de mostrar las distintas categorias seleccionadas con sus productos. Ademas muestras el mensaje "cargando productos" mientras son cargados en la página.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Navbar: Se encuentran las categorias de los productos, el nombre del sitio web y el logo al cual podemos seleccionar para volver a la pagina principal, ademas contiene el CartWidget.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CartWidget: Muestra la cantidad de productos en el carrito, sin funcionalidad por el momento.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
