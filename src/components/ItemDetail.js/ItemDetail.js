@@ -1,8 +1,24 @@
+import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import {useState}  from 'react'
 import './ItemDetail.css'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({nombre, precio, foto,foto2,foto3, detalle, stock}) => {
+
+const ItemDetail = ({nombre, precio, foto,foto2,foto3, detalle, stock, }) => {
     
+    
+    
+    const [count, setCount] = useState(0)
+
+    const confirmarCompra = (count) => {
+        
+        setCount(count)
+        
+    }
+
+   
+
     return(
         <div className='detalle'>
             <div className='detalleFotos'>
@@ -14,7 +30,9 @@ const ItemDetail = ({nombre, precio, foto,foto2,foto3, detalle, stock}) => {
                 <h1>{nombre}</h1>
                 <p>{detalle}</p>
                 <h2>${precio}</h2>
-                <ItemCount inicial={1} stock={stock}/>
+                { count > 0  && <Link to={'/cart'}>Finalizar</Link>}
+                    
+                { count <= 0   && <ItemCount inicial={1} stock={stock} onAdd={confirmarCompra} />}
             </div>
         </div>
 

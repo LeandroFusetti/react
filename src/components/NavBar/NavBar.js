@@ -11,7 +11,6 @@ const NavBar = () => {
                     <div className= "postionLogo">
                         <Logo/>
                         <h1 className= "logo">ALL <span>GAMER</span></h1>
-                        {/* <Link to='/'className='"logoNombre"'>ALL <span>GAMER</span></Link> */}
                     </div>
                     <div className= "navbar__div">
                         <Link to='/categoria/juegos' className='pestaña'>JUEGOS</Link>

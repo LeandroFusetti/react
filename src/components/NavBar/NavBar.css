@@ -3,10 +3,6 @@
     background: linear-gradient(90deg, rgba(72,190,25,1) 0%, rgba(58,144,26,1) 14%, rgba(47,115,25,1) 63%, rgba(26,60,22,1) 100%);
 }
 
-/* background: rgb(78,20,224);
-background: linear-gradient(90deg, rgba(78,20,224,1) 12%, rgba(85,0,255,1) 32%, rgba(82,0,246,1) 67%, rgba(39,0,118,1) 94%, rgba(26,12,56,1) 100%);
- */ 
-
 .logo span{
     color: rgb(186, 187, 186);
 }
@@ -30,8 +26,6 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
-
-
 
 .navbar__div a{
     margin: 3px 10px;
