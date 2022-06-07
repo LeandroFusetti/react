@@ -31,8 +31,8 @@ const ItemDetail = ({nombre, precio, foto,foto2,foto3, detalle, stock, }) => {
                 <p>{detalle}</p>
                 <h2>${precio}</h2>
                 { count > 0  && <Link to='/cart'>Finalizar</Link>}
-               
-                { count = 0   && <ItemCount inicial={1} stock={stock} SumarAlCarrito={confirmarCompra} />}
+                { count <= 0   && <ItemCount inicial={1} stock={stock} SumarAlCarrito={confirmarCompra} />}
+                
             </div>
         </div>
 
