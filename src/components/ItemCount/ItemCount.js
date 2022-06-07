@@ -1,6 +1,6 @@
 import {useState, } from 'react'
 import './ItemCount.css'
-const ItemCount = ({stock,inicial, onAdd}) =>{
+const ItemCount = ({stock,inicial, SumarAlCarrito}) =>{
 
     const [count, setCount]= useState(inicial)
  
@@ -18,7 +18,7 @@ const ItemCount = ({stock,inicial, onAdd}) =>{
     const  contadorDeBoton = () =>{
         
         console.log(count);
-        onAdd(count)
+        SumarAlCarrito(count)
     }
 
 
