@@ -1,19 +1,23 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import {useState}  from 'react'
+import {useContext} from 'react'
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
+import CartContext from '../../context/CartContext'
 
-
-const ItemDetail = ({nombre, precio, foto,foto2,foto3, detalle, stock, }) => {
+const ItemDetail = ({id, nombre, precio, foto,foto2,foto3, detalle, stock, }) => {
     
     
     
     const [count, setCount] = useState(0)
 
+    const {addItem} = useContext(CartContext)
+
     const confirmarCompra = (count) => {
         
         setCount(count)
+        addItem({id, nombre, precio, count, foto})
         
     }
 
