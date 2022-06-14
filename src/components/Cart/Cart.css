@@ -15,13 +15,13 @@
     
 }
 .carrito{
-    font-size: 60px;
+    font-size: 40px;
     padding-top: 20px;
     color: rgb(186, 187, 186);
     text-decoration: underline rgb(78,20,224);
 }
-.botonEliminar{
-    margin: 3px 10px;
+.botonAccion{
+    margin: 10px 10px;
     padding: 5px;
     background-color: rgb(78,20,224);
     color: rgb(186, 187, 186);
