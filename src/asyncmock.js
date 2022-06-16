@@ -19,7 +19,7 @@ const productos= [
     foto3:'../images/teclado_Logitech_G213_Prodigy_3.jpg',
     categoria:'perifericos',
     stock: 15,
-    detalle:'G213 Prodigy se ha diseñado para tu forma de jugar. Con teclas ajustadas para el rendimiento, combina lo mejor en sensación táctil y rendimiento para gaming. Las teclas están hechas para ofrecer una respuesta ultrarrápida, hasta 4 veces superior a la de los teclados estándar. Pon un toque exclusivo en el sistema con zonas de iluminación RGB personalizables,',
+    detalle:'G213 Prodigy se ha diseñado para tu forma de jugar. Con teclas ajustadas para el rendimiento, combina lo mejor en sensación táctil y rendimiento para gaming. Las teclas están hechas para ofrecer una respuesta ultrarrápida, hasta 4 veces superior a la de los teclados estándar. Pon un toque exclusivo en el sistema con zonas de iluminación RGB personalizables',
 
 },{
     id:'3',
