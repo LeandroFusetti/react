@@ -5,7 +5,7 @@ import {getFirestore} from 'firebase/firestore'
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+ const firebaseConfig = {
   apiKey: "AIzaSyAuARt3zAzeNZtwinNpib6blLUKao2BGXQ",
   authDomain: "allgamer-94662.firebaseapp.com",
   projectId: "allgamer-94662",
@@ -17,9 +17,28 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app)
+export const db = getFirestore(app) 
 
-export const collectionsName = {
+/* export const collectionsName = {
   productos: 'productos',
   ordenes: 'ordenes'
-}
+} 
+
+// Import the functions you need from the SDKs you need
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDyY0u5dG6BfmxGKDShWYmNbmdJl4BFyeM",
+  authDomain: "allgamer2.firebaseapp.com",
+  projectId: "allgamer2",
+  storageBucket: "allgamer2.appspot.com",
+  messagingSenderId: "232337001820",
+  appId: "1:232337001820:web:fac4d392156b2c43018599"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app) */

@@ -2,14 +2,14 @@ import { useContext} from 'react'
 import CartContext from '../../context/CartContext'
 import './Cart.css'
 import { Link } from 'react-router-dom'
-import { db } from '../../services/firebase'
+/* import { db } from '../../services/firebase'
 import { addDoc, collection,  getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
-
+ */
 const Cart =() => {
 
-    const {cart, borrarItem, borrarCarrito, costoTotal, getCount } = useContext (CartContext)
-    
-    const createOrder = () => {
+    const {cart, borrarItem, borrarCarrito, costoTotal, /* getCount  */} = useContext (CartContext)
+     
+    /* const createOrder = () => {
         console.log('crear orden')
         const objOrder = {
             buyer: {
@@ -55,10 +55,10 @@ const Cart =() => {
                 console.log(error)
                 alert(`Algunos productos no tienen stock`)
             })
-    }
+    } */
     
     
-    if (getCount()  === 0) {
+    /* if (getCount()  === 0) {
         return (
             <div style={{display:'flex', flexDirection:'column', alignItems:'center'}} >
                 <h2 className="carrito">No hay productos en el carrito</h2>
@@ -67,7 +67,7 @@ const Cart =() => {
                 </Link>
             </div>
         )
-    }
+    }  */
 
 
     return(
@@ -98,7 +98,8 @@ const Cart =() => {
             </div>
             <p style={{fontSize:'30px', paddingBottom:'20px'}}>TOTAL $ {costoTotal()}</p> 
             
-            <button className="botonAccion" onClick={createOrder}>TERMINAR MI COMPRA</button>
+            {/* <button className="botonAccion" onClick={createOrder}>TERMINAR MI COMPRA</button> */}
+            <Link to ='/order' className='ButtonDetail' style={{margin: '20px'}} >Finalizar compra</Link>
             <button className= 'botonAccion' onClick={()=> borrarCarrito()}>ELIMINAR</button>
         </div>
     )
