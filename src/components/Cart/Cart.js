@@ -99,7 +99,7 @@ const Cart =() => {
             <p style={{fontSize:'30px', paddingBottom:'20px'}}>TOTAL $ {costoTotal()}</p> 
             
             {/* <button className="botonAccion" onClick={createOrder}>TERMINAR MI COMPRA</button> */}
-            <Link to ='/order' className='ButtonDetail' style={{margin: '20px'}} >Finalizar compra</Link>
+            <Link to ='/order' className='botonAccion' style={{margin: '20px'}} >FINALIZAR COMPRA</Link>
             <button className= 'botonAccion' onClick={()=> borrarCarrito()}>ELIMINAR</button>
         </div>
     )

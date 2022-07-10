@@ -7,15 +7,14 @@ import { getDocs, collection, query, where} from 'firebase/firestore'
 /* import { getProductosPorCategoria } from '../../asyncmock' */
 import { db } from '../../services/firebase'
 const ItemListContainer = (props) => {
+    
     const [productos, setProductos] =useState([])
     const { categoriaId } = useParams()
     const [cargando, setCargando] = useState(true)
 
     useEffect(() => {
         setCargando(true)
-        const collectionRef = categoriaId 
-        ? query(collection(db, 'productos'), where('categoria', '==', categoriaId)) 
-        : collection(db, 'productos')
+        const collectionRef = categoriaId ? query(collection(db, 'productos'), where('categoria', '==', categoriaId)) : collection(db, 'productos')
 
     getDocs(collectionRef).then(response => {
         const productos = response.docs.map(doc => {

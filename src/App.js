@@ -6,6 +6,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {CartContextProvider} from './context/CartContext'
 import Cart from './components/Cart/Cart'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='*' element={<h1>Pagina no encontrada</h1>} />
             <Route path='/order' element = {<Formulario/>} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
         </CartContextProvider>
       </main>
