@@ -13,7 +13,7 @@ const NavBar = () => {
                         <h1 className= "logo">ALL <span>GAMER</span></h1>
                     </div>
                     <div className= "navbar__div">
-                        {/* <Link to='/categoria/juegos' className='pestaña'>JUEGOS</Link> */}
+                      
                         <Link to='/categoria/sillasgamer'className='pestaña'>SILLAS GAMER</Link>
                         <Link to='/categoria/perifericos'className='pestaña'>PERIFERICOS</Link>
                         <Link to='/categoria/monitores'className='pestaña'>MONITORES</Link>

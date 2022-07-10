@@ -1,10 +1,10 @@
-/* import {getProductos} from '../../asyncmock.js' */
+
 import {useEffect, useState} from 'react'
 import ItemList from '../ItemList/ItemList.js'
 import { useParams } from 'react-router-dom'
 import { getDocs, collection, query, where} from 'firebase/firestore'
 
-/* import { getProductosPorCategoria } from '../../asyncmock' */
+
 import { db } from '../../services/firebase'
 const ItemListContainer = (props) => {
     
@@ -27,24 +27,7 @@ const ItemListContainer = (props) => {
         setCargando(false)
     })
 
-
-
-        /* if(!categoriaId) {
-            getProductos().then(response => {
-                setProductos(response)
-            }).finally(()=>{
-                setCargando(false)
-            })
-
-            
-
-        } else {
-            getProductosPorCategoria(categoriaId).then(response => {
-                setProductos(response)
-            }).finally(()=>{
-                setCargando(false)
-            })
-        } */
+       
     }, [categoriaId])
 
     if(cargando){

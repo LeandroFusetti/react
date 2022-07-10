@@ -26,9 +26,9 @@ const ItemDetail = ({id, nombre, precio, foto,foto2,foto3, detalle, stock, }) =>
     return(
         <div className='detalle'>
             <div className='detalleFotos'>
-                <img src= {foto} width='190px'  alt={nombre}/>
-                <img src= {foto2} width='190px'  alt={nombre}/>
-                <img src= {foto3} width='190px'  alt={nombre}/>
+                <img src= {foto} width='190px' height='190px' alt={nombre}/>
+                <img src= {foto2} width='190px' height='190px' alt={nombre}/>
+                <img src= {foto3} width='190px' height='190px' alt={nombre}/>
             </div>    
             <div className='detalleInfo'>
                 <h1>{nombre}</h1>

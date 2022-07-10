@@ -8,14 +8,7 @@
     justify-content: space-evenly;
     margin: 0px;
     padding: 0px;
-    
-    /* -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-
-    background: rgb(72,190,25);
-    background: linear-gradient(90deg, rgba(72,190,25,1) 0%, rgba(58,144,26,1) 14%, rgba(47,115,25,1) 63%, rgba(26,60,22,1) 100%);
-     */
+  
 }
 
 .footer__div{
@@ -28,10 +21,10 @@
 
 .footer__div__list--dato{
     font-size: 1rem;
-                font-weight: 400;
-                color: rgb(186, 187, 186);
-                padding: 0.5rem;
-                letter-spacing: 2px;
+    font-weight: 400;
+    color: rgb(186, 187, 186);
+    padding: 0.5rem;
+    letter-spacing: 2px;
                 
 }
 
@@ -48,42 +41,9 @@
     -webkit-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.75);
-    position: absolute;
-    bottom:0;
+    /* position: absolute;
+    bottom:0; */
     background: rgb(72,190,25);
     background: linear-gradient(90deg, rgba(72,190,25,1) 0%, rgba(58,144,26,1) 14%, rgba(47,115,25,1) 63%, rgba(26,60,22,1) 100%);
     
 }
-/* 
-.footer{
-    width: 100%;
-    
-    
-    @include movil{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-   
-    &__div{
-        padding: 30px;
-        &__list{
-            list-style: none;
-            padding: 0px;
-            &--dato {
-                font-size: 1rem;
-                font-weight: 400;
-                color: white;
-                padding: 0.5rem;
-                letter-spacing: 2px;
-                
-            }
-        }
-        &--redes a{
-            padding: 15px;
-
-        }
-
-    }
-    
-} */

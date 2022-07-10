@@ -43,7 +43,30 @@ const productos= [
     stock: 16,
     detalle:'Jugá más fluido con frecuencia de actualización de 144Hz y 1ms de velocidad de respuesta gracias a la tecnología Motion Blur Reduction. Tecnología RADEON FreeSync™ para disfrutar de toda la acción sin parpadeos. Interacción en tiempo real y sin retrasos gracias a Dynamic Action Sync (DAS Mode). El Estabilizador de Negros permite colores oscuros más diferenciados.',
     
+},{
+    id:'5',
+    nombre: 'Silla Gamer Drift DR50 Roja y Negra',
+    precio:56400,
+    foto:'../images/Silla-gamer-Drift-DR50-roja-y-negra1.jpg',
+    foto2:'../images/Silla-gamer-Drift-DR50-roja-y-negra2.jpg',
+    foto3:'../images/Silla-gamer-Drift-DR50-roja-y-negra3.jpg',
+    categoria: 'sillasgamer',
+    stock: 20,
+    detalle:'La selección de una silla adecuada es muy importante para prevenir futuras lesiones. Con esta silla Drift, vas a tener la comodidad y el bienestar que necesitás a lo largo de tu jornada. Con su ajuste de altura, vas a poder fijar la posición de tu torso respecto a la mesa de trabajo y así vas a conseguir una silla más cómoda al nivel de tus necesidades',
+    
+},{
+    id:'6',
+    nombre: 'Monitor Gamer Curvo MSI Optix G24C4 led',
+    precio:95800,
+    foto:'../images/Monitor-gamer-curvo-MSI-Optix-G24C4-led3.jpg',
+    foto2:'../images/Monitor-gamer-curvo-MSI-Optix-G24C4-led1.jpg',
+    foto3:'../images/Monitor-gamer-curvo-MSI-Optix-G24C4-led2.jpg',
+    categoria: 'monitores',
+    stock: 20,
+    detalle:'Disfrutá de todas las cualidades que el monitor MSI G24C4 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente.su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad.',
+    
 }
+
 
 ]
 

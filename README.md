@@ -38,3 +38,6 @@ La ruta **'*'** es para indicar que la pagina no fue encontrada.
 
 **Logo:** Componente con la imagen del representativa del sitio web junto con el link para volver a la pagina principal.
 
+**Footer**: Contiene información sobre el local fisico.
+
+**Form**: Componente donde encontramos el formulario a completar por el comprador. Contiene los datos nombre, apellido, telefono, direccion y email.

@@ -17,7 +17,7 @@ function App() {
       <CartContextProvider>
         <BrowserRouter>
           <NavBar />
-          <Routes>
+          <Routes >
             <Route path='/' element={<ItemListContainer greeting={"Todos los Productos"}/>}/>
             <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="Productos filtrados por categoria "/>}/>
             <Route path='/detalle/:productoId' element={<ItemDetailContainer />}/>
@@ -25,10 +25,11 @@ function App() {
             <Route path='*' element={<h1>Pagina no encontrada</h1>} />
             <Route path='/order' element = {<Formulario/>} />
           </Routes>
-          <Footer/>
+          
         </BrowserRouter>
         </CartContextProvider>
       </main>
+      <Footer/>
     </div>
   );
 }

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import './CartWidget.css' 
 const CartWidget = () => {
     const { getCount } = useContext(CartContext)
-
     const count = getCount()
     
     return (

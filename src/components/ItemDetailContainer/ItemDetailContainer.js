@@ -20,10 +20,6 @@ const ItemDetailContainer = ()=>{
             console.log(error)
         })
 
-
-       /*  getProductosById(productoId).then(response =>{
-            setProductoId(response)
-        }) */
     }) 
 
     return(
