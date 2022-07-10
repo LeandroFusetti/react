@@ -8,7 +8,6 @@ const ItemDetailContainer = ()=>{
 
     
     const[producto, setProducto] =useState()
-
     const { productoId } = useParams()
 
     useEffect(()=>{

@@ -13,25 +13,23 @@ function App() {
     <div className="App">
       
       <main>
-      
-      <CartContextProvider>
-        <BrowserRouter>
-          <NavBar />
-          <Routes >
-            <Route path='/' element={<ItemListContainer greeting={"Todos los Productos"}/>}/>
-            <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="Productos filtrados por categoria "/>}/>
-            <Route path='/detalle/:productoId' element={<ItemDetailContainer />}/>
-            <Route path='/cart' element={<Cart />}/>
-            <Route path='*' element={<h1>Pagina no encontrada</h1>} />
-            <Route path='/order' element = {<Formulario/>} />
-          </Routes>
-          
-        </BrowserRouter>
+        <CartContextProvider>
+          <BrowserRouter>
+            <NavBar />
+            <Routes >
+              <Route path='/' element={<ItemListContainer greeting={"Todos los Productos"}/>}/>
+              <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting="Productos filtrados por categoria "/>}/>
+              <Route path='/detalle/:productoId' element={<ItemDetailContainer />}/>
+              <Route path='/cart' element={<Cart />}/>
+              <Route path='*' element={<h1>Pagina no encontrada</h1>} />
+              <Route path='/order' element = {<Formulario/>} />
+            </Routes>
+          </BrowserRouter>
         </CartContextProvider>
       </main>
       <Footer/>
     </div>
-  );
+  )
 }
 
 export default App;

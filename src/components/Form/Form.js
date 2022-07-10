@@ -1,13 +1,11 @@
 import { useForm } from 'react-hook-form'
 import { useContext, useState} from 'react'
 import { Link } from 'react-router-dom'
-
 import {db} from '../../services/firebase/index'
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
 import './Form.css' 
-
-import CartContext from '../../context/CartContext'
 import Swal from 'sweetalert2'
+import CartContext from '../../context/CartContext'
 
 const Formulario = () => {
    
@@ -30,20 +28,17 @@ const Formulario = () => {
             producto: cart,
             total: costoTotal()
         }
-        const ids = cart.map(prod => prod.id)
-
-        const batch = writeBatch(db)
-
+        
         const sinStock = []
-
+        const ids = cart.map(prod => prod.id)
+        const batch = writeBatch(db)
         const collectionRef = collection(db, 'productos')
-
+        
         getDocs(query(collectionRef, where(documentId(), 'in', ids)))
             .then(response => {
                 response.docs.forEach(doc => {
                     const dataDoc = doc.data()
                     const prodCount = cart.find(prod => prod.id === doc.id)?.count
-
                     if (dataDoc.stock >= prodCount) {
                         batch.update(doc.ref, { stock: dataDoc.stock - prodCount })
                     } else {
@@ -59,23 +54,21 @@ const Formulario = () => {
                     return Promise.reject({ type: 'sin_stock', productos: sinStock })
                 }
             }).then(({ id }) => {
-                Swal.fire(`Gracias por la compra `, `Numero de Orden ${id}`, "success");
+                Swal.fire(`Muchas gracias por su compra ${nombre} `, `Numero de Orden ${id}`, "success");
                 batch.commit()
                 reset()
                 borrarCarrito()
                 
             }).catch(error => {
                 console.log(error)
-                Swal.fire("Disculpe", `No hay stock disponible`, "error");
+                Swal.fire("Ups...", `No hay stock disponible`, "error");
                 borrarCarrito()
-               
             })
 
 
     }
 
-    const { register, handleSubmit, reset } = useForm()
-
+    const { handleSubmit, reset, register  } = useForm()
     const onSubmit = (data) => {
         console.log(data)
         reset()
@@ -92,58 +85,40 @@ const Formulario = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label>Nombre
-                        <input
-                            type="text"
-                            name="nombre"
-                            placeholder='Nombre'
-                            {...register('nombre', { required: true, maxLength: 20 })}
-                            onChange={(e => setNombre(e.target.value))} 
-                            />
-                            </label>
+                            <input type="text" name="nombre"placeholder='Nombre'
+                                {...register('nombre', { required: true, maxLength: 20 })}
+                                onChange={(e => setNombre(e.target.value))} />
+                        </label>
                     </div>
                     <div>
                         <label>Apellido
-                        <input
-                            type="text"
-                            name="apellido"
-                            placeholder='Apellido'
-                            {...register('apellido', { required: true, maxLength: 20 })}
-                            onChange={(e => setApellido(e.target.value))} 
-                            />
+                            <input type="text" name="apellido" placeholder='Apellido'
+                                {...register('apellido', { required: true, maxLength: 20 })}
+                                onChange={(e => setApellido(e.target.value))} />
                             </label>
                     </div>
                     <div>
                         <label>Mail
-                        <input
-                            type="email"
-                            name="mail"
-                            placeholder='Mail'
-                            {...register('mail', { required: true, maxLength: 20 })}
-                            onChange={(e => setMail(e.target.value))}
-                             />
-                             </label>
+                            <input type="email"  name="mail" placeholder='Mail'
+                                {...register('mail', { required: true, maxLength: 20 })}
+                                onChange={(e => setMail(e.target.value))} />
+                         </label>
                     </div>
                     <div>
                         <label>Telefono
-                        <input
-                            type="number"
-                            name="telefono"
-                            placeholder='Telefono'
-                            {...register('telefono', { required: true, maxLength: 20 })}
-                            onChange={(e => setTelefono(e.target.value))}
-                            />
+                            <input type="number"  name="telefono" placeholder='Telefono'
+                                {...register('telefono', { required: true, maxLength: 20 })}
+                                onChange={(e => setTelefono(e.target.value))} />
                             </label>
                     </div>
                     <div style={{display:'flex' ,flexDirection: 'row', alignItems: 'centar'}}>
-                    <Link to='/'  onClick={crearOrden} className='botonAccion' type='submit'  >Crear Orden</Link>
-                    <Link to='/' className='botonAccion'>Volver</Link> 
+                        <Link to='/'  onClick={crearOrden} className='botonAccion' type='submit'  >Crear Orden</Link>
+                        <Link to='/' className='botonAccion'>Volver</Link> 
                     </div>
                 </form>
             </div>
         </div>
     )
 }
-
-
 
 export default Formulario
